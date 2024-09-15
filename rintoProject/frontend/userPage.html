@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <script>
+        window.onload = function() {
+            // Check if user is authenticated
+            const token = sessionStorage.getItem('token');
+            if (!token) {
+                // If no token, redirect to login page
+                window.location.href = './index.html';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Hello User</h1>
+</body>
+</html>
